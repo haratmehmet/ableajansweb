@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Arka plan dairesi -->
+  <circle cx="32" cy="32" r="30" fill="#0E1014" stroke="#F55A00" stroke-width="2.5"/>
+  <!-- Turuncu "A" harfi — logodaki sembolle uyumlu -->
+  <text
+    x="32"
+    y="44"
+    text-anchor="middle"
+    font-family="'Outfit', 'Inter', system-ui, sans-serif"
+    font-size="34"
+    font-weight="800"
+    fill="#F55A00"
+  >A</text>
+</svg>

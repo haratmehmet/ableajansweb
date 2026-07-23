@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ableajans_app
+    restart: always
+    ports:
+      - "3015:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/ableajans?schema=public
+      - STORAGE_PROVIDER=local
+      - LOCAL_UPLOAD_DIR=./public/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ableajans_uploads:/app/public/uploads
+
+  db:
+    image: postgres:15-alpine
+    container_name: ableajans_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ableajans
+    ports:
+      - "5435:5432"
+    volumes:
+      - ableajans_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d ableajans"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  ableajans_pgdata:
+  ableajans_uploads:

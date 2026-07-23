@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-cms="site-title">Able Ajans | Yeni Nesil Dijital Çözümler</title>
+
+    <!-- SEO -->
+    <meta name="description" data-cms="site-desc" content="Able Ajans — Yazılım, sosyal medya yönetimi, web tasarım, dijital pazarlama ve drone çekimi alanlarında yenilikçi çözümler.">
+    <meta name="keywords" content="dijital ajans, web tasarım, yazılım geliştirme, sosyal medya, drone çekimi, dijital pazarlama, able ajans">
+    <meta name="author" content="Able Ajans">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ableajans.com/">
+    <meta property="og:title" content="Able Ajans | Yeni Nesil Dijital Çözümler">
+    <meta property="og:description" content="Yeni nesil dijital çözümlerimizle çok yakında yayındayız.">
+    <meta property="og:image" content="assets/Logo.svg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Able Ajans | Yeni Nesil Dijital Çözümler">
+    <meta name="twitter:description" content="Yeni nesil dijital çözümlerimizle çok yakında yayındayız.">
+    <meta name="twitter:image" content="assets/Logo.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="alternate icon" type="image/png" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ambient Layer -->
+    <div class="ambient-bg" aria-hidden="true"></div>
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="noise-layer" aria-hidden="true"></div>
+
+    <!-- Preloader -->
+    <div id="preloader" role="status" aria-label="Yükleniyor">
+        <div class="preloader-inner">
+            <img src="assets/Logo.svg" alt="Able Ajans" class="preloader-logo">
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================
+         FLOATING NAVIGATION
+    ====================================================== -->
+    <header class="nav-wrapper" id="navWrapper">
+        <nav class="nav-bar" id="navBar" role="navigation" aria-label="Ana Navigasyon">
+
+            <!-- Logo -->
+            <a href="#hero" class="nav-logo-link" aria-label="Able Ajans Ana Sayfa">
+                <img src="assets/Logo.svg" alt="Able Ajans" class="nav-logo" id="navLogo">
+            </a>
+
+            <!-- Desktop Menu Links -->
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Ana Sayfa</a></li>
+                <li><a href="#hizmetler" class="nav-link" data-section="hizmetler">Hizmetler</a></li>
+                <li><a href="#hakkimizda" class="nav-link" data-section="hakkimizda">Biz Kimiz</a></li>
+                <li><a href="#referanslar" class="nav-link" data-section="referanslar">Referanslar</a></li>
+                <li><a href="#iletisim" class="nav-link" data-section="iletisim">İletişim</a></li>
+            </ul>
+
+            <!-- Right Side -->
+            <div class="nav-right">
+                <div class="nav-badge">
+                    <span class="nav-badge-dot" aria-hidden="true"></span>
+                    Yakında Yayında
+                </div>
+                <a href="#iletisim" class="nav-cta" id="navCta">
+                    İletişim
+                </a>
+                <!-- Hamburger -->
+                <button class="nav-hamburger" id="navHamburger" aria-label="Menüyü Aç" aria-expanded="false" aria-controls="mobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <ul class="mobile-nav-links" role="list">
+                <li class="mob-link-item"><a href="#hero" class="mobile-nav-link" data-section="hero">Ana Sayfa</a></li>
+                <li class="mob-link-item"><a href="#hizmetler" class="mobile-nav-link" data-section="hizmetler">Hizmetler</a></li>
+                <li class="mob-link-item"><a href="#hakkimizda" class="mobile-nav-link" data-section="hakkimizda">Biz Kimiz</a></li>
+                <li class="mob-link-item"><a href="#referanslar" class="mobile-nav-link" data-section="referanslar">Referanslar</a></li>
+                <li class="mob-link-item"><a href="#iletisim" class="mobile-nav-link" data-section="iletisim">İletişim</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <a href="tel:+905458550089" class="btn-cta-primary" id="mobCtaCall" data-cms="hero-phone">+90 545 855 00 89</a>
+                <a href="https://wa.me/905458550089" class="btn-cta-secondary" id="mobCtaWa" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+
+        <!-- ======================================================
+             HERO SECTION
+        ====================================================== -->
+        <section class="hero-section" id="hero" aria-labelledby="hero-heading">
+
+            <!-- Logo Block -->
+            <div class="hero-logo-wrap anim-fade-up anim-d1" id="heroLogoWrap" aria-hidden="true">
+                <div class="logo-halo-outer"></div>
+                <div class="logo-halo"></div>
+                <img
+                    src="assets/Logo.svg"
+                    alt="Able Ajans logosu"
+                    class="hero-logo"
+                    id="heroLogo"
+                    draggable="false"
+                >
+            </div>
+
+            <!-- Eyebrow Tag -->
+            <p class="hero-eyebrow anim-fade-up anim-d2" aria-label="Durum: Yakında Yayında">
+                <span aria-hidden="true">✦</span>
+                <span data-cms="hero-eyebrow">Able Ajans &nbsp;·&nbsp; 2026</span>
+            </p>
+
+            <!-- Headline -->
+            <h1 class="hero-headline anim-fade-up anim-d3" id="hero-heading">
+                <span data-cms="hero-headline-plain">Dijitalde </span><span class="accent" data-cms="hero-headline-accent">Güçlü</span><br><span data-cms="hero-headline-rest">Varoluş Başlıyor</span>
+            </h1>
+
+            <!-- Subline -->
+            <p class="hero-subline anim-fade-up anim-d4" data-cms="hero-subline">
+                İşletmeleri dijital dünyada büyüten yenilikçi çözümler geliştiriyoruz.
+                Yeni web sitemiz çok yakında yayında.
+            </p>
+
+            <!-- CTA Group -->
+            <div class="cta-group anim-fade-up anim-d5">
+                <a href="tel:+905458550089" class="btn-cta-primary" id="ctaCall" data-cms-href="hero-phone-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.01 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    <span data-cms="hero-cta-primary-text">Bizi Arayın</span>
+                </a>
+                <a href="https://wa.me/905458550089" class="btn-cta-secondary" id="ctaWhatsapp" data-cms-href="hero-wa-link" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <span data-cms="hero-cta-secondary-text">WhatsApp İletişim</span>
+                </a>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="social-strip anim-fade-up anim-d6">
+                <span data-cms="social-1">Güvenilir Ajans</span>
+                <span class="social-strip-divider" aria-hidden="true"></span>
+                <span data-cms="social-2">Premium Çözümler</span>
+                <span class="social-strip-divider" aria-hidden="true"></span>
+                <span data-cms="social-3">Yenilikçi Yaklaşım</span>
+            </div>
+
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <!-- ======================================================
+             HIZMETLER SECTION
+        ====================================================== -->
+        <section class="services-section" id="hizmetler" aria-labelledby="hizmetler-heading">
+            <div class="section-header anim-fade-up">
+                <p class="section-eyebrow">Uzmanlık Alanlarımız</p>
+                <h2 class="section-title" id="hizmetler-heading" data-cms="services-title">Neler <span class="accent">Yapıyoruz?</span></h2>
+                <p class="section-subtitle" data-cms="services-subtitle">İşletmenizi dijital dünyada öne çıkaracak kapsamlı hizmetler sunuyoruz.</p>
+            </div>
+            <div class="services-grid-full" id="servicesGrid" role="list">
+                <!-- JS ile doldurulur -->
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <!-- ======================================================
+             BİZ KİMİZ SECTION
+        ====================================================== -->
+        <section class="about-section" id="hakkimizda" aria-labelledby="hakkimizda-heading">
+            <div class="about-inner">
+                <div class="about-text anim-fade-up">
+                    <p class="section-eyebrow">Biz Kimiz</p>
+                    <h2 class="section-title" id="hakkimizda-heading" data-cms="about-title">Dijitalde <span class="accent">Fark Yaratan</span> Ekip</h2>
+                    <p class="about-body" data-cms="about-body">
+                        Able Ajans olarak, işletmelerin dijital dönüşüm yolculuklarında güvenilir bir partner olarak yer alıyoruz. Yazılım geliştirmeden sosyal medya yönetimine, web tasarımından drone çekimine kadar geniş bir yelpazede hizmet sunuyoruz.
+                    </p>
+                    <p class="about-body" data-cms="about-body-2">
+                        Genç, dinamik ve yaratıcı ekibimizle her projeye özgün bir bakış açısı getiriyor, müşterilerimizin hedeflerine ulaşmalarını sağlıyoruz.
+                    </p>
+                    <div class="about-stats" id="aboutStats">
+                        <!-- JS ile doldurulur -->
+                    </div>
+                </div>
+                <div class="team-grid" id="teamGrid">
+                    <!-- JS ile doldurulur -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <!-- ======================================================
+             REFERANSLAR SECTION
+        ====================================================== -->
+        <section class="refs-section" id="referanslar" aria-labelledby="refs-heading">
+            <div class="section-header anim-fade-up">
+                <p class="section-eyebrow">Referanslarımız</p>
+                <h2 class="section-title" id="refs-heading" data-cms="refs-title">Birlikte <span class="accent">Başarı</span> Yarattıklarımız</h2>
+                <p class="section-subtitle" data-cms="refs-subtitle">Güvenimizi kazanan markalar ve projeler.</p>
+            </div>
+            <div class="refs-grid" id="refsGrid">
+                <!-- JS ile doldurulur -->
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <!-- ======================================================
+             İLETİŞİM SECTION
+        ====================================================== -->
+        <section class="contact-section" id="iletisim" aria-labelledby="iletisim-heading">
+            <div class="contact-inner anim-fade-up">
+                <div class="contact-text">
+                    <p class="section-eyebrow">İletişim</p>
+                    <h2 class="section-title" id="iletisim-heading" data-cms="contact-title">Projenizi <span class="accent">Konuşalım</span></h2>
+                    <p class="section-subtitle" data-cms="contact-subtitle">Hayalinizdeki dijital deneyimi birlikte inşa edelim.</p>
+                </div>
+                <div class="contact-cards" id="contactCards">
+                    <!-- JS ile doldurulur -->
+                </div>
+                <div class="social-links" id="socialLinks">
+                    <!-- JS ile doldurulur -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+             FOOTER
+        ====================================================== -->
+        <footer class="site-footer" role="contentinfo">
+            <div class="footer-left">
+                <img src="assets/Logo.svg" alt="Able Ajans" class="footer-logo">
+                <span data-cms="footer-copy">© 2026 Able Ajans &nbsp;·&nbsp; Tüm hakları saklıdır.</span>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links" id="footerSocialLinks">
+                    <!-- JS ile doldurulur -->
+                </div>
+                <div class="footer-status">
+                    <span class="footer-status-dot" aria-hidden="true"></span>
+                    Yapım Aşamasında
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- /page-wrapper -->
+
+    <!-- Scripts -->
+    <script src="js/cms.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
