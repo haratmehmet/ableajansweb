@@ -80,9 +80,10 @@ export class VercelBlobStorageProvider implements StorageProvider {
 }
 
 export function getStorageProvider(): StorageProvider {
-  const providerType = process.env.STORAGE_PROVIDER || "local";
+  const providerType = (process.env.STORAGE_PROVIDER || "").trim().toLowerCase();
+  const isVercel = process.env.VERCEL === "1";
   
-  if (providerType === "vercel-blob") {
+  if (providerType === "vercel-blob" || isVercel) {
     return new VercelBlobStorageProvider();
   }
   
