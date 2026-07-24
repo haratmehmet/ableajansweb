@@ -3,6 +3,8 @@ export const dynamic = "force-dynamic";
 import { buildMetadata } from "@/lib/metadata";
 import HeroSection from "@/components/sections/home/HeroSection";
 import TrustSection from "@/components/sections/home/TrustSection";
+import ServicesSection from "@/components/sections/home/ServicesSection";
+import ProjectsSection from "@/components/sections/home/ProjectsSection";
 import { prisma } from "@/lib/prisma";
 
 import { Metadata } from "next";
@@ -46,9 +48,24 @@ export default async function HomePage() {
     orderBy: { order: 'asc' },
   });
 
+  // Fetch active services
+  const services = await prisma.service.findMany({
+    where: { isVisible: true },
+    orderBy: { order: 'asc' },
+  });
+
+  // Fetch featured projects for homepage
+  const featuredProjects = await prisma.project.findMany({
+    where: { isVisible: true, isFeatured: true },
+    orderBy: { order: 'asc' },
+    take: 6,
+  });
+
   return (
     <>
       {heroData && <HeroSection hero={heroData as any} />}
+      <ServicesSection services={services} />
+      <ProjectsSection projects={featuredProjects} />
       <TrustSection 
         stats={stats} 
         references={references} 
