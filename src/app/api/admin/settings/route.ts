@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getAdminFromRequest } from "@/lib/auth";
+import { revalidatePath } from "next/cache";
 export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
@@ -39,6 +40,8 @@ export async function PUT(request: Request) {
     });
 
     await prisma.$transaction(updates);
+
+    revalidatePath("/", "layout");
 
     return NextResponse.json({ success: true });
   } catch (error) {
