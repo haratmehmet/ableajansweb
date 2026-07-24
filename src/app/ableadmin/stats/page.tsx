@@ -192,7 +192,7 @@ export default function StatsPage() {
 
   return (
     <div style={styles.container}>
-      <div style={styles.header}>
+      <div className="admin-main-header" style={styles.header}>
         <h1 style={styles.title}>İstatistikler</h1>
         <button 
           style={{ ...styles.button, opacity: saving ? 0.7 : 1 }} 

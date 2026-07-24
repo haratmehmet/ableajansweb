@@ -265,7 +265,7 @@ export default function ServicesPage() {
 
   return (
     <div style={styles.container}>
-      <div style={styles.header}>
+      <div className="admin-main-header" style={styles.header}>
         <h1 style={styles.title}>Hizmetler</h1>
         <button 
           style={styles.button} 

@@ -1001,6 +1001,22 @@ img { display: block; }
   .admin-table-wrapper table {
     min-width: 600px;
   }
+  .admin-preview-container {
+    padding: 24px 16px !important;
+    min-height: auto !important;
+  }
+  .admin-preview-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 16px !important;
+  }
+  .admin-preview-subtitle {
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+  .admin-main-header button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 

@@ -72,7 +72,7 @@ export default function SolutionsPage() {
 
   return (
     <div style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto", color: "var(--text-primary)" }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px" }}>
+      <div className="admin-main-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px" }}>
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: "1.6rem", fontWeight: 700, letterSpacing: "-0.02em", margin: 0 }}>Çözümler</h1>
         <button onClick={handleSave} disabled={saving} style={btnStyle}>{saving ? "Kaydediliyor..." : "Tümünü Kaydet"}</button>
       </div>

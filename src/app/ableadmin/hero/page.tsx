@@ -219,7 +219,7 @@ export default function HeroSettingsPage() {
 
   return (
     <div style={styles.container}>
-      <div style={styles.header}>
+      <div className="admin-main-header" style={styles.header}>
         <h1 style={styles.title}>Hero Alanı Yönetimi</h1>
         <button 
           style={{ ...styles.button, opacity: saving ? 0.7 : 1 }} 
@@ -285,18 +285,19 @@ export default function HeroSettingsPage() {
 
         <div style={styles.card}>
           <h2 style={styles.cardTitle}>Canlı Önizleme</h2>
-          <div style={styles.previewContainer}>
-            {hero.eyebrow && <div style={styles.previewEyebrow}>{hero.eyebrow}</div>}
-            <div style={styles.previewTitle}>
-              {hero.title} <span style={styles.previewTitleAccent}>{hero.titleAccent}</span><br />
-              {hero.titleLine2}
-            </div>
-            {hero.subtitle && <div style={styles.previewSubtitle}>{hero.subtitle}</div>}
-            {hero.ctaText && (
-              <div style={styles.previewCta}>
-                {hero.ctaText}
+          <div className="admin-preview-container" style={styles.previewContainer as any}>
+            <div style={{ position: 'relative', zIndex: 1, width: '100%' }}>
+              {hero.eyebrow && <div className="admin-preview-eyebrow" style={styles.previewEyebrow}>{hero.eyebrow}</div>}
+              <div className="admin-preview-title" style={styles.previewTitle}>
+                {hero.title} {hero.titleAccent && <span style={{ color: 'var(--orange-vivid)' }}>{hero.titleAccent}</span>}
               </div>
-            )}
+              {hero.subtitle && <div className="admin-preview-subtitle" style={styles.previewSubtitle}>{hero.subtitle}</div>}
+              {hero.ctaText && (
+                <div className="admin-preview-cta" style={styles.previewCta}>
+                  {hero.ctaText}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

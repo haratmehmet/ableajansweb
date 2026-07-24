@@ -253,7 +253,7 @@ export default function SiteSettingsPage() {
 
   return (
     <div style={styles.container}>
-      <div style={styles.header}>
+      <div className="admin-main-header" style={styles.header}>
         <h1 style={styles.title}>Site Ayarları</h1>
         <button 
           style={{ ...styles.button, opacity: saving ? 0.7 : 1 }} 
