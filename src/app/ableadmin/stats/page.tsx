@@ -203,7 +203,7 @@ export default function StatsPage() {
         </button>
       </div>
 
-      <div style={styles.grid}>
+      <div className="admin-grid-auto" style={styles.grid}>
         {stats.map((stat) => (
           <div key={stat.id} style={styles.card}>
             <button style={styles.removeButton} onClick={() => handleRemove(stat.id)} title="Sil">&times;</button>

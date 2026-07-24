@@ -989,8 +989,14 @@ img { display: block; }
   }
   .admin-grid-2,
   .admin-grid-3,
-  .admin-grid-4 {
+  .admin-grid-4,
+  .admin-grid-auto {
     grid-template-columns: 1fr !important;
+  }
+  .admin-flex-row-mobile-col {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
   }
   .admin-table-wrapper {
     overflow-x: auto;

@@ -130,7 +130,7 @@ export default function ReferencesPage() {
             <input type="file" onChange={handleUpload} style={{ color: "rgba(255,255,255,0.92)", marginBottom: "12px" }} />
             {formData.logoUrl && <img src={formData.logoUrl} alt="Logo" style={{ height: "60px", objectFit: "contain", display: "block" }} />}
           </div>
-          <div style={{ display: "flex", gap: "20px" }}>
+          <div className="admin-flex-row-mobile-col" style={{ display: "flex", gap: "20px" }}>
             <div style={{ flex: 1 }}>
               <label style={{ display: "block", fontSize: "0.75rem", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: "8px" }}>Sıra</label>
               <input type="number" value={formData.order} onChange={(e) => setFormData({...formData, order: parseInt(e.target.value)})} style={inputStyle} />
@@ -140,7 +140,7 @@ export default function ReferencesPage() {
               <label htmlFor="isVisible" style={{ fontSize: "0.95rem" }}>Görünür</label>
             </div>
           </div>
-          <div style={{ display: "flex", gap: "12px", marginTop: "12px" }}>
+          <div className="admin-flex-row-mobile-col" style={{ display: "flex", gap: "12px", marginTop: "12px" }}>
             <button type="submit" disabled={saving} style={btnStyle}>{saving ? "Kaydediliyor..." : "Kaydet"}</button>
             {editingId && (
               <button type="button" onClick={() => { setEditingId(null); setFormData({ name: "", description: "", logoUrl: "", websiteUrl: "", order: 0, isVisible: true }); }} style={{ ...btnStyle, background: "rgba(255,255,255,0.1)" }}>İptal</button>
@@ -149,7 +149,7 @@ export default function ReferencesPage() {
         </form>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "24px" }}>
+      <div className="admin-grid-auto" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "24px" }}>
         {references.map((ref, idx) => (
           <div key={ref.id || ref._id || idx} style={{ background: "rgba(14,16,20,0.4)", backdropFilter: "blur(10px)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "12px", padding: "24px" }}>
             {ref.logoUrl && <img src={ref.logoUrl} alt={ref.name} style={{ height: "40px", objectFit: "contain", marginBottom: "16px" }} />}

@@ -230,7 +230,7 @@ export default function HeroSettingsPage() {
         </button>
       </div>
 
-      <div style={styles.grid}>
+      <div className="admin-grid-2" style={styles.grid}>
         <div style={styles.card}>
           <h2 style={styles.cardTitle}>İçerik Düzenle</h2>
           <div style={styles.formGroup}>

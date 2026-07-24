@@ -286,7 +286,7 @@ export default function ProjectsPage() {
             </div>
           </div>
           
-          <div style={{ display: "flex", gap: "12px" }}>
+          <div className="admin-flex-row-mobile-col" style={{ display: "flex", gap: "12px" }}>
             <button type="submit" disabled={savingProj} style={btnStyle}>{savingProj ? "Kaydediliyor..." : "Projeyi Kaydet"}</button>
             {editingId && (
               <button type="button" onClick={() => { setEditingId(null); setFormData(defaultForm); }} style={{ ...btnStyle, background: "rgba(255,255,255,0.1)" }}>İptal</button>
@@ -295,7 +295,7 @@ export default function ProjectsPage() {
         </form>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "24px" }}>
+      <div className="admin-grid-auto" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "24px" }}>
         {projects.map((proj, idx) => (
           <div key={proj.id} style={{ background: "rgba(14,16,20,0.4)", backdropFilter: "blur(10px)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "12px", padding: "20px", display: "flex", flexDirection: "column", opacity: proj.isVisible ? 1 : 0.5 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
