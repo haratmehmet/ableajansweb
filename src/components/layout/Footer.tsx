@@ -127,17 +127,18 @@ export default async function Footer() {
               <Image
                 src={footerData.logoUrl}
                 alt="Able Ajans Logo"
-                width={160}
-                height={45}
-                style={{ objectFit: "contain", width: "auto", height: "45px", display: "block" }}
+                width={180}
+                height={60}
+                style={{ objectFit: "contain", width: "180px", height: "auto", display: "block" }}
                 className="footer-logo"
               />
             ) : (
               <Image
                 src="/assets/Logo.svg"
                 alt="Able Ajans Logo"
-                width={160}
-                height={50}
+                width={180}
+                height={60}
+                style={{ objectFit: "contain", width: "180px", height: "auto", display: "block" }}
                 className="footer-logo"
               />
             )}
