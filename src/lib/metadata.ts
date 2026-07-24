@@ -27,8 +27,10 @@ export function buildMetadata({
   const fullTitle = title ? (title === name ? name : `${name} | ${title}`) : name;
   const fullUrl = `${url}${path}`;
   
-  // Use uploaded logo or fallback to a PNG. WhatsApp/Socials do not support SVG for OG images.
-  const previewImage = ogImage || "https://vfjxf35lrpm1bcqz.public.blob.vercel-storage.com/1784854878097-Ablelogo.png";
+  // Use the dynamic OG image API
+  const defaultLogo = "https://vfjxf35lrpm1bcqz.public.blob.vercel-storage.com/1784854878097-Ablelogo.png";
+  const ogLogoParam = ogImage ? encodeURIComponent(ogImage) : encodeURIComponent(defaultLogo);
+  const previewImage = `${url}/api/og?logo=${ogLogoParam}`;
 
   return {
     title: fullTitle,
