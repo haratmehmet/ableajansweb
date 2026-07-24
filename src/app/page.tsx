@@ -40,12 +40,6 @@ export default async function HomePage() {
     select: { label: true, value: true, icon: true }
   });
 
-  // Fetch active solutions
-  const solutions = await prisma.solutionItem.findMany({
-    where: { isVisible: true },
-    orderBy: { order: 'asc' },
-  });
-
   return (
     <>
       {heroData && <HeroSection hero={heroData as any} />}
