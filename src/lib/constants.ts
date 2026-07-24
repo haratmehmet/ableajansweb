@@ -1,9 +1,8 @@
 // src/lib/constants.ts
 
 export const SITE_NAME = "Able Ajans";
-export const SITE_URL  = "https://ableajans.com";
-export const SITE_DESC =
-  "Able Ajans — Yazılım, sosyal medya yönetimi, web tasarım, dijital pazarlama ve drone çekimi alanlarında yenilikçi çözümler.";
+export const SITE_URL  = "https://ableajansweb.vercel.app";
+export const SITE_DESC = "Dijital mükemmellik, kod satırlarında başlar. Yenilikçi yazılım ve tasarım çözümleri.";
 
 export const NAV_LINKS = [
   { label: "Ana Sayfa",   href: "/"          },
