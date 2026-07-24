@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
   let settingsMap: Record<string, string> = {};
   try {
     const settings = await prisma.siteSetting.findMany({
-      where: { key: { in: ['site_name', 'site_description', 'site_url', 'site_favicon'] } }
+      where: { key: { in: ['site_name', 'site_description', 'site_url', 'site_favicon', 'site_logo'] } }
     });
     settingsMap = settings.reduce((acc, s) => ({ ...acc, [s.key]: s.value }), {});
   } catch (e) {
@@ -36,7 +36,8 @@ export async function generateMetadata(): Promise<Metadata> {
     siteName: settingsMap.site_name,
     description: settingsMap.site_description,
     siteUrl: settingsMap.site_url,
-    favicon: settingsMap.site_favicon
+    favicon: settingsMap.site_favicon,
+    ogImage: settingsMap.site_logo
   });
 }
 

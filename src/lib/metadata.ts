@@ -9,6 +9,7 @@ interface PageMetaOptions {
   siteName?: string;
   siteUrl?: string;
   favicon?: string;
+  ogImage?: string;
 }
 
 export function buildMetadata({
@@ -18,12 +19,16 @@ export function buildMetadata({
   siteName,
   siteUrl,
   favicon,
+  ogImage,
 }: PageMetaOptions = {}): Metadata {
   const name = siteName || SITE_NAME;
   const desc = description || SITE_DESC;
   const url = siteUrl || SITE_URL;
   const fullTitle = title ? (title === name ? name : `${name} | ${title}`) : name;
   const fullUrl = `${url}${path}`;
+  
+  // Use uploaded logo or fallback to a PNG. WhatsApp/Socials do not support SVG for OG images.
+  const previewImage = ogImage || "https://vfjxf35lrpm1bcqz.public.blob.vercel-storage.com/1784854878097-Ablelogo.png";
 
   return {
     title: fullTitle,
@@ -37,13 +42,13 @@ export function buildMetadata({
       title: fullTitle,
       description: desc,
       siteName: name,
-      images: [{ url: "/assets/Logo.svg", width: 1200, height: 630 }],
+      images: [{ url: previewImage, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description: desc,
-      images: ["/assets/Logo.svg"],
+      images: [previewImage],
     },
     robots: { index: true, follow: true },
   };
