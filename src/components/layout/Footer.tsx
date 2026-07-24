@@ -223,7 +223,7 @@ export default async function Footer() {
             WebkitBackgroundClip: "text",
             backgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            fontSize: "1.05rem"
+            fontSize: "0.9rem"
           }}>Able Ajans</strong>
           <span style={{ opacity: 0.6 }}>{footerData.copyrightText || `· Tüm hakları saklıdır. © ${new Date().getFullYear()}`}</span>
         </div>
