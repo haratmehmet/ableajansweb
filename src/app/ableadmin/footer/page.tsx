@@ -127,7 +127,7 @@ export default function FooterPage() {
             <input type="text" value={formData.copyrightText || ""} onChange={(e) => setFormData({...formData, copyrightText: e.target.value})} style={inputStyle} placeholder="Able Ajans · Tüm hakları saklıdır. © 2026" />
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+          <div className="admin-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
             <div>
               <label style={labelStyle}>Instagram URL</label>
               <input type="url" value={formData.instagramUrl || ""} onChange={(e) => setFormData({...formData, instagramUrl: e.target.value})} style={inputStyle} />

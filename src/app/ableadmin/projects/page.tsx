@@ -227,7 +227,7 @@ export default function ProjectsPage() {
           
           <div style={{ background: "rgba(0,0,0,0.2)", padding: 24, borderRadius: 12 }}>
             <h3 style={{ fontSize: "1rem", marginBottom: 16, color: "var(--orange-vivid)" }}>1. Temel Bilgiler</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: 20 }}>
+            <div className="admin-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: 20 }}>
               <div><label style={labelStyle}>Başlık</label><input type="text" value={formData.title} onChange={handleTitleChange} required style={inputStyle} /></div>
               <div><label style={labelStyle}>URL (Slug)</label><input type="text" value={formData.slug} onChange={(e) => setFormData({...formData, slug: e.target.value})} required style={inputStyle} /></div>
             </div>
@@ -251,11 +251,11 @@ export default function ProjectsPage() {
 
           <div style={{ background: "rgba(0,0,0,0.2)", padding: 24, borderRadius: 12 }}>
             <h3 style={{ fontSize: "1rem", marginBottom: 16, color: "var(--orange-vivid)" }}>2. Detay Sayfası Bilgileri</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: 20 }}>
+            <div className="admin-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: 20 }}>
               <div><label style={labelStyle}>Müşterinin Problemi (Neye ihtiyaç duyuyordu?)</label><textarea value={formData.problem} onChange={(e) => setFormData({...formData, problem: e.target.value})} style={{ ...inputStyle, minHeight: "120px" }} /></div>
               <div><label style={labelStyle}>Üretilen Çözüm (Nasıl çözüldü?)</label><textarea value={formData.solution} onChange={(e) => setFormData({...formData, solution: e.target.value})} style={{ ...inputStyle, minHeight: "120px" }} /></div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+            <div className="admin-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
               <div>
                 <label style={labelStyle}>Özellikler (Her satıra bir özellik)</label>
                 <textarea value={formData.features} onChange={(e) => setFormData({...formData, features: e.target.value})} style={{ ...inputStyle, minHeight: "100px" }} placeholder="Admin Panel&#10;Responsive&#10;SEO Optimizasyonu" />

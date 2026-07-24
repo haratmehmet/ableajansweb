@@ -81,7 +81,7 @@ export default function SolutionsPage() {
         {solutions.map((sol, idx) => (
           <div key={idx} style={{ background: "rgba(14,16,20,0.6)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: "16px", padding: "32px", position: "relative" }}>
             <button onClick={() => removeSolution(idx)} style={{ position: "absolute", top: "16px", right: "16px", background: "rgba(239,68,68,0.1)", border: "none", color: "#ef4444", borderRadius: "8px", padding: "8px 12px", cursor: "pointer" }}>Sil</button>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+            <div className="admin-grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
               <div>
                 <label style={labelStyle}>Numara</label>
                 <input type="text" value={sol.number || ""} onChange={(e) => updateSolution(idx, "number", e.target.value)} style={inputStyle} placeholder="01" />

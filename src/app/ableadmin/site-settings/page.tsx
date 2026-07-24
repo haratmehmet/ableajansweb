@@ -266,7 +266,7 @@ export default function SiteSettingsPage() {
 
       <div style={styles.card}>
         <h2 style={styles.cardTitle}>Genel Bilgiler</h2>
-        <div style={styles.grid2}>
+        <div className="admin-grid-2" style={styles.grid2}>
           <div style={styles.formGroup}>
             <label style={styles.label}>Site Adı</label>
             <input style={styles.input} name="site_name" value={settings.site_name} onChange={handleChange} />
@@ -284,7 +284,7 @@ export default function SiteSettingsPage() {
 
       <div style={styles.card}>
         <h2 style={styles.cardTitle}>Marka & Görseller</h2>
-        <div style={styles.grid2}>
+        <div className="admin-grid-2" style={styles.grid2}>
           <div style={styles.formGroup}>
             <label style={styles.label}>Ana Logo (SVG / PNG)</label>
             <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
@@ -312,7 +312,7 @@ export default function SiteSettingsPage() {
 
       <div style={styles.card}>
         <h2 style={styles.cardTitle}>Navigasyon (Menü) & Aksiyonlar</h2>
-        <div style={styles.grid2}>
+        <div className="admin-grid-2" style={styles.grid2}>
           <div style={styles.formGroup}>
             <label style={styles.label}>Sağ Üst Buton Metni</label>
             <input style={styles.input} name="portal_text" value={settings.portal_text} onChange={handleChange} placeholder="Örn: Portal" />
@@ -326,7 +326,7 @@ export default function SiteSettingsPage() {
 
       <div style={styles.card}>
         <h2 style={styles.cardTitle}>SEO: Sayfa Başlıkları (Tarayıcı Sekmesi)</h2>
-        <div style={styles.grid2}>
+        <div className="admin-grid-2" style={styles.grid2}>
           <div style={styles.formGroup}>
             <label style={styles.label}>Ana Sayfa Başlığı</label>
             <input style={styles.input} name="page_title_home" value={settings.page_title_home} onChange={handleChange} placeholder="Örn: Yeni Nesil Dijital Çözümler" />
@@ -353,7 +353,7 @@ export default function SiteSettingsPage() {
       <div style={styles.card}>
         <h2 style={styles.cardTitle}>Hesap Bilgileri & Şifre (Yönetici)</h2>
         <form onSubmit={handleAccountSubmit}>
-          <div style={styles.grid2}>
+          <div className="admin-grid-2" style={styles.grid2}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={styles.formGroup}>
                 <label style={styles.label}>E-posta (Kullanıcı Adı)</label>

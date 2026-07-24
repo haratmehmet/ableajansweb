@@ -11,6 +11,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const [loading, setLoading] = useState(true);
   const isLoginPage = pathname === "/ableadmin/login";
 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     if (isLoginPage) { setLoading(false); return; }
     fetch("/api/auth/me")
@@ -18,6 +20,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       .then(d => { setUser(d.user); setLoading(false); })
       .catch(() => { router.push("/ableadmin/login"); });
   }, [isLoginPage, router]);
+
+  // Close menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   if (isLoginPage) return <>{children}</>;
   if (loading) return (
@@ -29,8 +36,23 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   return (
     <div style={{ display: "flex", minHeight: "100vh", background: "var(--bg-primary)" }}>
-      <AdminSidebar user={user} />
-      <main style={{ flex: 1, marginLeft: 260, padding: "32px 40px", overflowY: "auto" }}>
+      <AdminSidebar user={user} isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
+      {mobileMenuOpen && (
+        <div className="admin-sidebar-overlay" onClick={() => setMobileMenuOpen(false)} />
+      )}
+      <main className="admin-main" style={{ flex: 1, marginLeft: 260, padding: "32px 40px", overflowY: "auto" }}>
+        <div style={{ display: "flex", alignItems: "center", marginBottom: "20px" }} className="mobile-header-only">
+          <button 
+            onClick={() => setMobileMenuOpen(true)}
+            style={{ display: "none", background: "transparent", border: "none", color: "white", cursor: "pointer", marginRight: "16px" }}
+            className="admin-menu-btn"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          </button>
+          <style dangerouslySetInnerHTML={{__html: `
+            @media (max-width: 768px) { .admin-menu-btn { display: block !important; } }
+          `}} />
+        </div>
         {children}
       </main>
     </div>

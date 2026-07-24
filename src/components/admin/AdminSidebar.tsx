@@ -21,9 +21,11 @@ const navItems = [
 
 interface AdminSidebarProps {
   user: { name: string; email: string; role: string } | null;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 
-export default function AdminSidebar({ user }: AdminSidebarProps) {
+export default function AdminSidebar({ user, isOpen, onClose }: AdminSidebarProps) {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -33,16 +35,28 @@ export default function AdminSidebar({ user }: AdminSidebarProps) {
   };
 
   return (
-    <aside style={{ position: "fixed", left: 0, top: 0, bottom: 0, width: 260, background: "rgba(14,16,20,0.95)", backdropFilter: "blur(20px)", borderRight: "1px solid rgba(255,255,255,0.06)", display: "flex", flexDirection: "column", zIndex: 100 }}>
+    <aside className={`admin-sidebar ${isOpen ? 'open' : ''}`} style={{ position: "fixed", left: 0, top: 0, bottom: 0, width: 260, background: "rgba(14,16,20,0.95)", backdropFilter: "blur(20px)", borderRight: "1px solid rgba(255,255,255,0.06)", display: "flex", flexDirection: "column", zIndex: 100 }}>
       {/* Logo */}
-      <div style={{ padding: "28px 24px 20px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      <div style={{ padding: "28px 24px 20px", borderBottom: "1px solid rgba(255,255,255,0.06)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <Link href="/ableadmin" style={{ textDecoration: "none" }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.3rem", fontWeight: 700, letterSpacing: "-0.02em" }}>
             <span style={{ color: "rgba(255,255,255,0.92)" }}>Able </span>
             <span style={{ background: "linear-gradient(135deg, #F55A00, #FF6B1A)", WebkitBackgroundClip: "text", color: "transparent" }}>Panel</span>
           </h2>
         </Link>
+        {onClose && (
+          <button 
+            className="admin-menu-close-btn"
+            onClick={onClose} 
+            style={{ display: "none", background: "transparent", border: "none", color: "rgba(255,255,255,0.6)", cursor: "pointer", padding: "4px" }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        )}
       </div>
+      <style dangerouslySetInnerHTML={{__html: `
+        @media (max-width: 768px) { .admin-menu-close-btn { display: block !important; } }
+      `}} />
 
       {/* Navigation */}
       <nav id="admin-sidebar-nav" style={{ flex: 1, padding: "16px 12px", overflowY: "auto" }}>

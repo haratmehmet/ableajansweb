@@ -293,7 +293,7 @@ export default function HeroSettingsPage() {
             </div>
             {hero.subtitle && <div style={styles.previewSubtitle}>{hero.subtitle}</div>}
             {hero.ctaText && (
-              <div style={styles.previewCta}>
+              <div className="admin-grid-2" style={styles.grid2 as any}>
                 {hero.ctaText}
               </div>
             )}

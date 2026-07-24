@@ -282,7 +282,7 @@ export default function ServicesPage() {
       {showForm && (
         <div style={styles.card}>
           <h2 style={styles.cardTitle}>{editingId ? 'Hizmeti Düzenle' : 'Yeni Hizmet Ekle'}</h2>
-          <div style={styles.grid2}>
+          <div className="admin-grid-2" style={styles.grid2 as any}>
             <div style={styles.formGroup}>
               <label style={styles.label}>Hizmet Adı</label>
               <input style={styles.input} value={formData.name} onChange={handleNameChange} />
@@ -320,6 +320,7 @@ export default function ServicesPage() {
       )}
 
       <div style={styles.card}>
+      <div className="admin-table-wrapper">
         <table style={styles.table}>
           <thead>
             <tr>
@@ -350,6 +351,7 @@ export default function ServicesPage() {
             )}
           </tbody>
         </table>
+      </div>
       </div>
 
       {toast.show && (
