@@ -223,9 +223,12 @@ export default async function Footer() {
             WebkitBackgroundClip: "text",
             backgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            fontSize: "0.9rem"
+            fontSize: "0.9rem",
+            lineHeight: 1,
+            transform: "translateY(-1px)",
+            display: "inline-block"
           }}>Able Ajans</strong>
-          <span style={{ opacity: 0.6 }}>{footerData.copyrightText || `· Tüm hakları saklıdır. © ${new Date().getFullYear()}`}</span>
+          <span style={{ opacity: 0.6, lineHeight: 1 }}>{footerData.copyrightText || `· Tüm hakları saklıdır. © ${new Date().getFullYear()}`}</span>
         </div>
           <div className="footer-bottom-right" style={{ display: "flex", gap: "20px" }}>
             <Link href="/kvkk" className="footer-link">Gizlilik & KVKK</Link>
