@@ -48,6 +48,7 @@ export default function Navbar({ logoUrl, portalText, portalUrl }: NavbarProps) 
                 alt="Able Ajans Logo"
                 width={160}
                 height={40}
+                unoptimized={true}
                 style={{ objectFit: "contain", width: "auto", height: "40px", display: "block" }}
                 className="nav-logo"
               />
@@ -57,6 +58,7 @@ export default function Navbar({ logoUrl, portalText, portalUrl }: NavbarProps) 
                 alt="Able Ajans Logo"
                 width={140}
                 height={40}
+                unoptimized={true}
                 priority
                 className="nav-logo"
               />

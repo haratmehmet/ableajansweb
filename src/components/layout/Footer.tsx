@@ -129,6 +129,7 @@ export default async function Footer() {
                 alt="Able Ajans Logo"
                 width={180}
                 height={60}
+                unoptimized={true}
                 style={{ objectFit: "contain", width: "180px", height: "auto", display: "block" }}
                 className="footer-logo"
               />
@@ -138,6 +139,7 @@ export default async function Footer() {
                 alt="Able Ajans Logo"
                 width={180}
                 height={60}
+                unoptimized={true}
                 style={{ objectFit: "contain", width: "180px", height: "auto", display: "block" }}
                 className="footer-logo"
               />
