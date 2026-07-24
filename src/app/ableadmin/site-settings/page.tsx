@@ -219,10 +219,12 @@ export default function SiteSettingsPage() {
       if (data.url) {
         setSettings(prev => ({ ...prev, [fieldName]: data.url }));
         showToast('Görsel yüklendi. Uygulamak için "Kaydet" butonuna basmayı unutmayın!');
+      } else {
+        alert('Yükleme hatası: ' + (data.message || data.details || 'Bilinmeyen hata'));
       }
     } catch (err) {
       console.error(err);
-      alert('Yükleme hatası');
+      alert('Beklenmeyen yükleme hatası: ' + String(err));
     }
   };
 

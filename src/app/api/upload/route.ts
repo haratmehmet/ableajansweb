@@ -33,6 +33,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true, url: media.url, filename: media.filename, media });
   } catch (error) {
     console.error("Upload error:", error);
-    return NextResponse.json({ success: false, message: "Sunucu hatası" }, { status: 500 });
+    return NextResponse.json({ success: false, message: error instanceof Error ? error.message : "Sunucu hatası", details: String(error) }, { status: 500 });
   }
 }
